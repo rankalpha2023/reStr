@@ -231,7 +231,7 @@ func processSingleFile(config *Config, result *Result, filePath string) error {
 	}
 	
 	if config.Trial {
-		// fmt.Printf("[试验] 替换 %d 处字符串: %s\n", matchCount, filePath)
+		fmt.Printf("[试验] 替换 %d 处字符串: %s\n", matchCount, filePath)
 		atomic.AddInt32(&result.Matches, int32(matchCount))
   	atomic.AddInt32(&result.FilesMatches, 1);
 		return nil
